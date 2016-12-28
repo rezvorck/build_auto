@@ -8,5 +8,5 @@ debian:
   - export KBUILD_BUILD_USER=rezvorck
   - export KBUILD_BUILD_HOST=debian
   - make -j2 defconfig 1>/dev/null 
-  - make -j2 1>/dev/null 2>errors.log && build_auto/auto.sh boot recovery && curl --upload-file update.zip https://transfer.sh/update.zip
-  - curl --upload-file errors.log https://transfer.sh/errors.log
+  - make -j2 1>/dev/null 2>errors.log && build_auto/auto.sh boot recovery && curl -s --upload-file update.zip https://transfer.sh/update.zip
+  - curl -s --upload-file errors.log https://transfer.sh/errors.log

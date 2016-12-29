@@ -9,7 +9,7 @@ arm64)
 ;;
 arm)
  [ -f "arch/arm/boot/zImage-dtb" ] && [ "$(echo $@ | grep boot)" ] && cp arch/arm/boot/zImage-dtb $(dirname $0)/boot/arm/boot.img-kernel && $(dirname $0)/repack.sh boot
- [ -f "arch/arm/boot/zImage-dtb" ] && [ "$(echo $@ | grep recovery)" ] && cp arch/arm/boot/zImage-dtb $(dirname $0)/boot/arm/recovery.img-kernel && $(dirname $0)/repack.sh boot
+ [ -f "arch/arm/boot/zImage-dtb" ] && [ "$(echo $@ | grep recovery)" ] && cp arch/arm/boot/zImage-dtb $(dirname $0)/recovery/arm/recovery.img-kernel && $(dirname $0)/repack.sh recovery
 ;;
 esac
 
